@@ -108,6 +108,15 @@
 -- ex:-SELECT * FROM Products
 -- WHERE Price NOT BETWEEN 10 AND 20;
 
+-- SQL ALiases:-
+-- It is used to give a table or column in a table ,a temporary name.IT often used to make column names more readable.it only exisits for the duration of that query.It is created with AS keyword.
+-- Alias Column Syntax:-
+-- SELECT column_name AS alias_name
+-- FROM table_name;
+
+-- Alias Table Syntax:-
+-- SELECT column_name(s)
+-- FROM table_name AS alias_name;
 
 
 
