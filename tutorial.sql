@@ -118,6 +118,132 @@
 -- SELECT column_name(s)
 -- FROM table_name AS alias_name;
 
+-- SQL JOIN:-
+-- It is used to combine rows from two or more tables based on a related column between them.
+-- ex:-SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+-- FROM Orders
+-- INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+
+-- SQL INNER JOIN:-
+-- this keyword is used to selects records that have matching values in both tables.
+-- ex:-SELECT column_name(s)
+-- FROM table1
+-- INNER JOIN table2
+-- ON table1.column_name = table2.column_name;
+
+-- SQL LEFT JOIN:-
+-- IT returns all the records from left table and matching records from the right table.The result is 0 records from the right side.if there is no match.
+
+-- Ex:- SELECT column_name(s)
+-- FROM table1
+-- LEFT JOIN table2
+-- ON table1.column_name = table2.column_name; i.e table1=left table2=right
+
+-- SQL RIGHT JOIN:-
+-- it returns all records from the right table(table2) and matching records from the left table (table1).the result is 0 records from the left side if there is no match.
+
+-- Ex:-SELECT column_name(s)
+-- FROM table1
+-- RIGHT JOIN table2
+-- ON table1.column_name = table2.column_name;
+
+-- SQL FULL OUTER JOIN:-
+-- it returns all records when there is a match in left(table1) or right table2 records
+-- Ex:-SELECT column_name(s)
+-- FROM table1
+-- FULL OUTER JOIN table2
+-- ON table1.column_name = table2.column_name
+-- WHERE condition;
+
+-- SQL SELF JOIN:-
+-- it is a regular join,but the table is joined with itself.
+-- EX:-SELECT column_name(s)
+-- FROM table1 T1, table1 T2
+-- WHERE condition;
+
+-- SQL UNION:-
+-- It is used to combine the result-set of two or more SELECT statement.Every SELECT statement within UNION must have the same number of columnsThe columns must also have similar data types.The columns in every SELECT statement must also be in the same order.
+
+-- EX:-SELECT column_name(s) FROM table1
+-- UNION
+-- SELECT column_name(s) FROM table2;
+
+-- SQL GROUP BY:-
+-- IT is used to groups rows that have the same values into summary rows ,like'Find the number of customers in each country'.it is often used with various aggregate functions(COUNT(),MAX(),MIN(),SUM()) to group the result-set by one or more columns.
+
+-- EX:-SELECT column_name(s)
+-- FROM table_name
+-- WHERE condition
+-- GROUP BY column_name(s)
+-- ORDER BY column_name(s);
+
+-- SQL HAVING:-
+-- It is added to sql because the WHERE Keyword cannot be used with qggregate function.
+-- EX:-SELECT column_name(s)
+-- FROM table_name
+-- WHERE condition
+-- GROUP BY column_name(s)
+-- HAVING condition
+-- ORDER BY column_name(s);
+
+-- SQL EXISTS:-
+-- It is used to test for the existence of any record in a subquery.it return TRUE if the subquery returns one or more records.
+-- EX:-SELECT column_name(s)
+-- FROM table_name
+-- WHERE EXISTS
+-- (SELECT column_name FROM table_name WHERE condition);
+
+-- SQL ANY and ALL:-
+-- operators allow us to perform a camparison between a single column value and a range of other values.
+-- ANY operator used to return a boolean value as a result.and return true if any of the subquery values meet the condition.ANY means that the condition will be true if the operations is true for any of the values in the range.
+-- SELECT column_name(s)
+-- FROM table_name
+-- WHERE column_name operator ANY
+--   (SELECT column_name
+--   FROM table_name
+--   WHERE condition);
+
+-- ALL operators used to return a boolean value.it return TRUE if all the subquery values meet the condition and it is used with the SELECT,WHERE and HAVING statements.iAL means that the condition will be ture only if the operation is true for all the values in the ranges.
+-- EX:-SELECT ALL column_name(s)
+-- FROM table_name
+-- WHERE condition;
+
+-- SQL SELECT INTO:-
+-- It copies data from one table into a new table.SELECT INTO can also be used to create a new, empty table using the schema of another. Just add a WHERE clause that causes the query to return no data:
+-- EX:-SELECT *
+-- INTO newtable [IN externaldb]
+-- FROM oldtable
+-- WHERE condition;
 
 
+-- SQL INSERT INTO SELECT:-
+-- it copies r=data from one table and inserts it into another tables.it requires that the data types in source and the target tables match.
+-- EX:-INSERT INTO table2
+-- SELECT * FROM table1
+-- WHERE condition;
 
+-- SQL CASE:-
+-- IT goes through condition and return a value when the first condition is met(like an if-then-else statement).So,onec a condition is True,it will stop reading and return the result.if no condition are true,it returns the values in the else cause.If there is no else part and no conditions are true,it returns NULL.
+-- EX:-CASE
+--     WHEN condition1 THEN result1
+--     WHEN condition2 THEN result2
+--     WHEN conditionN THEN resultN
+--     ELSE result
+-- END;
+
+-- SQL NULL:-
+-- SQL IFNULL(),ISNULL(),COLALESCE(),NVL()
+
+-- SQL stored procedures:-
+-- Am stored procedure is prepared SQL code that can save so the code can be reused over and over again.So if tou have an SQL query that wi=rite over and over agian save it as a stored procedure and then just call it to execute it.:
+-- Stored Procedure Syntax:-
+-- CREATE PROCEDURE procedure_name
+-- AS
+-- sql_statement
+-- GO;
+
+-- Execute a Stored Procdure:-
+-- EXEC procedure_name;
+
+-- Comments in SQL:-
+-- (--) is used as isngle line comments.
