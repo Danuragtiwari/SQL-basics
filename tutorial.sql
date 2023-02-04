@@ -247,3 +247,45 @@
 
 -- Comments in SQL:-
 -- (--) is used as isngle line comments.
+
+-- DATABASES:-
+
+-- CREATE DATABASE statement is used to create a new SQL database.
+-- EX:-CREATE DATABASE databasename;
+
+-- DROP DATABASE statement is used to drop an existing SQL database.
+-- EX:-DROP DATABASE databasename;
+
+-- BACKUP DATABASE is used in SQL Server to create a full back up of an existing SQL database.
+-- EX:-BACKUP DATABASE databasename
+-- TO DISK = 'filepath';
+
+-- ALTER TABLE is used to add,delete,or modify columns in an existing table.
+-- EX:-ALTER TABLE table_name
+-- ADD column_name datatype;
+
+-- CONSTRAINTS:- it is used to specify rules for data in table.
+-- EX:-CREATE TABLE table_name (
+--     column1 datatype constraint,
+--     column2 datatype constraint,
+--     column3 datatype constraint,
+--     ....
+-- );
+
+-- NOT NULL:-ensure that a column cannot have a NULL value.
+-- UNIQUE:-Ensures that all values in a column are different.
+-- PRIMARY KEY:-A combination of a NOT NULL and UNIQUE.
+-- FOREIGN KEY:-Prevents actions that would destroy links between tables.
+-- CHECK:-Ensures that the values in a column satisfies a specific condition.
+-- DEFAULT:-Sets a default value for a column if no value is specified.
+-- CREATE INDEX:-Used to create and retrieve data from the database very quickly.
+
+-- CREATE VIEW:-a view is a virtual table based on the result set of sql statement.
+-- EX:-CREATE VIEW view_name AS
+-- SELECT column1, column2, ...
+-- FROM table_name
+-- WHERE condition;
+
+-- SQL injection is a code injection technique that might destroy our database.SQL injection is one of the most common web hacking techniques.
+
+-- SQL Hosting:-It is used to store and retrieve data from a database,it should have access to database system that uses the SQL language.
